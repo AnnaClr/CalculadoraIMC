@@ -1,0 +1,164 @@
+/* Variáveis Globais */
+:root {
+    --p-color-1: #154961;
+    --p-color-2: #27607A;
+    --s-color-1: #268672;
+    --s-color-2: #268672;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.5;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px #f2f2f2;
+    background-color: #f2f2f2;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    width: 100%;
+    margin: 50px;
+}
+
+h1, h2 {
+    font-size: 42px;
+    font-weight: bold;
+    color: var(--p-color-1);
+    width: 70%;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--p-color-2);
+    width: 75%;
+    margin-left: 50px;
+    margin-top: 0;
+    text-align: justify;
+}
+
+h1, h2, p {
+    display: block;
+}
+
+ul, li {
+    font-size: 24px;
+    font-weight: 400;
+    font-weight: 200;
+    color: var(--p-color-2);
+    width: 100%;
+    margin-left: 50px;
+    margin-top: 0;
+    text-align: justify;
+}
+
+.cover_1 {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    background-color: #f2f2f2;
+}
+
+.cover_2 {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    background-color: #ffffff;
+}
+
+.cover_img {
+    flex: 1;
+    width: 500px;
+    height: auto;
+    margin: 45px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.logo_img {
+    width: 200px;
+    height: auto;
+    margin: 50px;
+}
+
+.footer_img {
+    width: 200px;
+    height: auto;
+    margin: 50px;
+}
+
+.button_1 {
+    background-color: #e9c040;
+    color: rgb(0, 0, 0);
+   
+    width: 200px;
+    height: auto;
+    padding: 18px;
+    margin: 50px;
+  
+    font-size: 16px;
+    font-weight: 600;
+ 
+    border: none;
+    border-radius: 30px;
+    
+    cursor: pointer;
+}
+
+.button_2 {
+    background-color: #268672;
+    color: rgb(0, 0, 0);
+    font-size: 10px;
+   
+    width: 200px;
+    height: auto;
+    margin: 50px;
+    padding: 18px ;
+  
+    font-size: 16px;
+    font-weight: 600;
+ 
+    border: none;
+    border-radius: 30px;
+    
+    cursor: pointer;
+}
