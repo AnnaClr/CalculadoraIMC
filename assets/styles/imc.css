@@ -4,6 +4,13 @@
     --p-color-2: #27607A;
     --s-color-1: #268672;
     --s-color-2: #1b705c;
+    --accent-color: #e9c040;
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --font-primary: 'Work Sans', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
 }
 
 * {
@@ -13,24 +20,29 @@
 }
 
 body {
-    font-family: 'Work Sans', sans-serif;
-    line-height: 1.5;
-    background-color: #f9f9f9;
-    color: var(--p-color-1);
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 header {
     width: 100%;
-    height: auto;
     padding: 20px 0;
     background-color: #f2f2f2;
     text-align: center;
     border-bottom: 1px solid #e7e9ea;
+    animation: fadeInDown 1s ease;
 }
 
 header img {
     width: 150px;
     height: auto;
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.1);
 }
 
 /* Área principal */
@@ -48,21 +60,30 @@ main > section {
     max-width: 800px;
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
     padding: 30px;
     text-align: center;
+    animation: fadeInUp 1s ease;
 }
 
 main > section h2 {
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 2rem; /* 32px */
+    font-weight: 700;
     color: var(--p-color-1);
+    margin-bottom: 20px;
+    font-family: var(--font-secondary);
+    letter-spacing: -0.5px;
+}
+
+main > section p {
+    font-size: 1.125rem; /* 18px */
+    color: var(--p-color-2);
+    line-height: 1.8;
     margin-bottom: 20px;
 }
 
 main > section .imc_form {
     margin-top: 20px;
-
 }
 
 main > section form {
@@ -74,10 +95,11 @@ main > section form {
 main > section form input {
     width: 100%;
     padding: 12px;
-    font-size: 16px;
+    font-size: 1rem; /* 16px */
     border: 1px solid #dcdcdc;
     border-radius: 5px;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
 }
 
 main > section form input:focus {
@@ -87,7 +109,7 @@ main > section form input:focus {
 }
 
 main > section form input::placeholder {
-    font-size: 16px;
+    font-size: 1rem; /* 16px */
     color: #aaa;
     font-style: italic;
 }
@@ -96,32 +118,34 @@ main > section form .button {
     background-color: var(--s-color-1);
     color: white;
     padding: 12px;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 1rem; /* 16px */
+    font-weight: 600;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: var(--transition);
 }
 
 main > section form .button:hover {
     background-color: var(--s-color-2);
+    transform: translateY(-2px);
 }
 
 main > section #result {
     margin-top: 20px;
     padding: 15px;
-    font-size: 18px;
+    font-size: 1.125rem; /* 18px */
     font-weight: 500;
     color: var(--p-color-2);
     background-color: #e8f5e9;
     border: 1px solid var(--s-color-1);
     border-radius: 5px;
     text-align: center;
+    animation: fadeIn 0.5s ease;
 }
 
 main > section #result strong {
-    font-weight: bold;
+    font-weight: 700;
     color: var(--s-color-1);
 }
 
@@ -130,6 +154,7 @@ main > section #result img {
     margin: 15px auto 0;
     max-width: 100px;
     height: auto;
+    animation: bounce 1s infinite;
 }
 
 main > section .imc_img {
@@ -137,6 +162,7 @@ main > section .imc_img {
     max-width: 600px;
     height: auto;
     margin: 30px auto 0;
+    animation: fadeIn 1s ease;
 }
 
 footer {
@@ -147,9 +173,52 @@ footer {
     padding: 20px;
     background-color: #f2f2f2;
     border-top: 1px solid #e7e9ea;
+    animation: fadeInUp 1s ease;
 }
 
 footer img {
     width: 150px;
     height: auto;
+    transition: transform 0.3s ease;
+}
+
+footer img:hover {
+    transform: scale(1.1);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
